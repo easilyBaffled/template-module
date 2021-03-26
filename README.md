@@ -1,2 +1,1 @@
-# template-module
-Created with CodeSandbox
+This is just an example module

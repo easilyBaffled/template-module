@@ -1,0 +1,65 @@
+{
+  "name": "template-module",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "nyc mocha --paralell --growl",
+    "test:watch": "npm run test -- --watch",
+    "build": "npx @pika/pack build",
+    "publish": "npx @pika/pack publish",
+    "version": "npx @pika/pack",
+    "package-check": "npx package-check",
+    "lint": "prettier --write --config ./.prettier.js *.js && eslint -c ./.eslintrc.js --fix . --ext .js"
+  },
+  "exports": {
+    "./polyfill": "./dist-src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/easilyBaffled/console.tap/issues"
+  },
+  "homepage": "https://github.com/easilyBaffled/console.tap#readme",
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "__tests__/**/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-node",
+        {
+          "exclude": [
+            "__tests__/**/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-web",
+        {
+          "exclude": [
+            "__tests__/**/*"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "nyc": "*",
+    "@pika/pack": "*",
+    "@pika/plugin-build-node": "*",
+    "@pika/plugin-build-types": "*",
+    "@pika/plugin-build-web": "*",
+    "@pika/plugin-standard-pkg": "*",
+    "prettier": "*"
+  },
+  "dependencies": {},
+  "keywords": []
+}

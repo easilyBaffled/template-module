@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "chai": "*",
+    "eslint": "*"
     "mocha": "*",
     "nyc": "*",
     "@pika/pack": "*",

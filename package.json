@@ -10,7 +10,7 @@
     "publish": "npx @pika/pack publish",
     "version": "npx @pika/pack",
     "package-check": "npx package-check --cwd [./pkg]",
-    "lint": "prettier --write --config ./.prettier.js *.js && eslint -c ./.eslintrc.js --fix . --ext .js"
+    "lint": "prettier --write --config ./.prettier.js *.js && eslint -f stylish -c ./.eslintrc.js --fix . --ext .js"
   },
   "exports": {
     "./polyfill": "./dist-src/index.js"

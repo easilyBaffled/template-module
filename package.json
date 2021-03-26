@@ -9,7 +9,7 @@
     "build": "npx @pika/pack build",
     "publish": "npx @pika/pack publish",
     "version": "npx @pika/pack",
-    "package-check": "npx package-check",
+    "package-check": "npx package-check --cwd [./pkg]",
     "lint": "prettier --write --config ./.prettier.js *.js && eslint -c ./.eslintrc.js --fix . --ext .js"
   },
   "exports": {
@@ -26,25 +26,19 @@
       [
         "@pika/plugin-standard-pkg",
         {
-          "exclude": [
-            "__tests__/**/*"
-          ]
+          "exclude": ["__tests__/**/*"]
         }
       ],
       [
         "@pika/plugin-build-node",
         {
-          "exclude": [
-            "__tests__/**/*"
-          ]
+          "exclude": ["__tests__/**/*"]
         }
       ],
       [
         "@pika/plugin-build-web",
         {
-          "exclude": [
-            "__tests__/**/*"
-          ]
+          "exclude": ["__tests__/**/*"]
         }
       ]
     ]

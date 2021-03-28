@@ -3,58 +3,61 @@
   "version": "0.1.0",
   "description": "",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "nyc mocha --paralell --growl",
+    "test": "nyc mocha './src/tests/**/*.test.js' --paralell --growl",
     "test:watch": "npm run test -- --watch",
     "build": "npx @pika/pack build",
     "publish": "npx @pika/pack publish",
     "version": "npx @pika/pack",
     "package-check": "npx package-check --cwd [./pkg]",
-    "lint": "prettier --write --config ./.prettier.js *.js && eslint -f stylish -c ./.eslintrc.js --fix . --ext .js"
-  },
-  "exports": {
-    "./polyfill": "./dist-src/index.js"
+    "prettier": "prettier --write  src/",
+    "lint": "eslint -f stylish -c .eslintrc.cjs --fix . --ext .js",
+	"format": "npm run prettier && npm run lint"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/easilyBaffled/console.tap/issues"
-  },
-  "homepage": "https://github.com/easilyBaffled/console.tap#readme",
   "@pika/pack": {
     "pipeline": [
       [
         "@pika/plugin-standard-pkg",
         {
-          "exclude": ["__tests__/**/*"]
+          "exclude": [
+            "__tests__/**/*"
+          ]
         }
       ],
       [
         "@pika/plugin-build-node",
         {
-          "exclude": ["__tests__/**/*"]
+          "exclude": [
+            "__tests__/**/*"
+          ]
         }
       ],
       [
         "@pika/plugin-build-web",
         {
-          "exclude": ["__tests__/**/*"]
+          "exclude": [
+            "__tests__/**/*"
+          ]
         }
       ]
     ]
   },
   "devDependencies": {
-    "chai": "*",
-    "eslint": "*",
-    "mocha": "*",
-    "nyc": "*",
     "@pika/pack": "*",
     "@pika/plugin-build-node": "*",
     "@pika/plugin-build-types": "*",
     "@pika/plugin-build-web": "*",
     "@pika/plugin-standard-pkg": "*",
+    "chai": "*",
+    "eslint": "*",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-sort-keys-fix": "^1.1.1",
+    "mocha": "*",
+    "nyc": "*",
     "prettier": "*"
   },
-  "dependencies": {},
   "keywords": []
 }

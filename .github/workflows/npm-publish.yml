@@ -4,8 +4,9 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -32,10 +33,6 @@ jobs:
       - name: publish
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-          npm ci
-          npm run format
-          npm run test
-          npm run build
 #          npm run package-check
           npm run publish
         env:

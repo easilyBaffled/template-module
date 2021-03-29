@@ -29,11 +29,14 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-      - name: publsh
+      - name: publish
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-      - run: npm ci
-      - run: npm run publish
+          npm ci
+          npm run format
+          npm run test
+          npm run build
+          npm run publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 #

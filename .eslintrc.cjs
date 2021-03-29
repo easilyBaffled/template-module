@@ -20,7 +20,7 @@ module.exports = {
         navigator:  true,
         window:     true
     },
-    ignorePatterns: [ 'node_modules/' ],
+    ignorePatterns: [ 'node_modules/', 'pkg/' ],
     parserOptions:  {
         ecmaFeatures: {
             impliedStrict: true

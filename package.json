@@ -10,10 +10,10 @@
     "build": "npx pika build",
     "publish": "npx np patch --contents=pkg",
     "version": "npx pika",
-    "package-check": "npx package-check --cwd [./pkg]",
+    "package-check": "npx package-check --cwd ./pkg",
     "prettier": "prettier --write  src/",
     "lint": "eslint -f stylish -c .eslintrc.cjs --fix . --ext .js",
-	"format": "npm run prettier && npm run lint"
+    "format": "npm run prettier && npm run lint"
   },
   "author": "",
   "license": "ISC",
@@ -51,6 +51,7 @@
     "@pika/plugin-build-types": "*",
     "@pika/plugin-build-web": "*",
     "@pika/plugin-standard-pkg": "*",
+    "@skypack/package-check": "^0.2.2",
     "chai": "*",
     "eslint": "*",
     "eslint-plugin-import": "^2.22.1",

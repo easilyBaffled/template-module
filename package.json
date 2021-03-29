@@ -7,9 +7,9 @@
   "scripts": {
     "test": "nyc mocha './src/tests/**/*.test.js' --paralell --growl",
     "test:watch": "npm run test -- --watch",
-    "build": "npx @pika/pack build",
-    "publish": "npx @pika/pack publish",
-    "version": "npx @pika/pack",
+    "build": "npx pika build",
+    "publish": "npx np patch --contents=pkg",
+    "version": "npx pika",
     "package-check": "npx package-check --cwd [./pkg]",
     "prettier": "prettier --write  src/",
     "lint": "eslint -f stylish -c .eslintrc.cjs --fix . --ext .js",

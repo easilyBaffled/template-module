@@ -2,12 +2,10 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
 
 name: Node.js Package
-
 on:
   push:
     branches:
       - master
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,7 +31,6 @@ jobs:
       - name: publish
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-#          npm run package-check
           npm run publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -17,7 +17,7 @@ export const rgbToHex = ( red, green, blue ) => {
 /**
  *
  * @param {string} hex
- * @returns {string[]}
+ * @returns {number[]}
  */
 export const hexToRgb = ( hex ) => {
     const red = parseInt( hex.substring( 0, 2 ), 16 );

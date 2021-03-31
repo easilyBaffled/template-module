@@ -1,6 +1,9 @@
 {
-  "name": "template-module",
-  "version": "0.1.0",
+  "name": "@easilybaffled/template-module",
+  "publishConfig": {
+	"access": "public"
+  },
+  "version": "0.0.0",
   "description": "",
   "main": "src/index.js",
   "type": "module",

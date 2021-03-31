@@ -11,7 +11,7 @@
     "test": "nyc mocha './src/tests/**/*.test.js' --paralell --growl",
     "test:watch": "npm run test -- --watch",
     "build": "npx pika build",
-    "publish": "npx np patch --contents=./pkg",
+    "release": "npx np patch --contents=./pkg",
     "version": "npx pika",
     "package-check": "npx package-check --cwd ./pkg",
     "prettier": "prettier --write  src/",

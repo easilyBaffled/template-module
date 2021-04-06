@@ -33,9 +33,7 @@ jobs:
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npx np patch --contents=./pkg --no-publish
-          npm publish ./pkg
+        run: npm publish ./pkg
 
 #         npm config set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
 #

@@ -30,8 +30,9 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: publish
         run: |
-#          npm config set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
           npm run release
+
+#          npm config set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
 #
 #  publish-gpr:
 #    needs: build

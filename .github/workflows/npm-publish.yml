@@ -28,10 +28,8 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: publish
         run: |
-          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm config set //registry.npmjs.org/:_authToken ${{secrets.NPM_TOKEN}}
           npm run release
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 #
 #  publish-gpr:
 #    needs: build

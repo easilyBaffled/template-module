@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.4",
+  "version": "0.0.0-development",
   "description": "",
   "main": "src/index.js",
   "type": "module",
@@ -15,7 +15,8 @@
     "package-check": "npx package-check --cwd ./pkg",
     "prettier": "prettier --write  src/",
     "lint": "eslint -f stylish -c .eslintrc.cjs --fix . --ext .js",
-    "format": "npm run prettier && npm run lint"
+    "format": "npm run prettier && npm run lint",
+    "semantic-release": "semantic-release"
   },
   "author": "",
   "license": "ISC",
@@ -60,7 +61,12 @@
     "eslint-plugin-sort-keys-fix": "^1.1.1",
     "mocha": "^8.3.2",
     "nyc": "^15.1.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "semantic-release": "^17.4.2"
   },
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/easilyBaffled/template-module.git"
+  }
 }

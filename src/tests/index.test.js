@@ -16,9 +16,9 @@ describe( "Color Code Converter", () => {
 
     describe( "Hex to RGB conversion", () => {
         it( "converts the basic colors", () => {
-            const red = hexToRgb( "ff0000" ),
-                green = hexToRgb( "00ff00" ),
-                blue = hexToRgb( "0000ff" );
+            const red = hexToRgb( "ff0000" );
+            const green = hexToRgb( "00ff00" );
+            const blue = hexToRgb( "0000ff" );
 
             expect( red ).to.deep.equal([ 255, 0, 0 ]);
             expect( green ).to.deep.equal([ 0, 255, 0 ]);

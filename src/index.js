@@ -29,7 +29,9 @@ export const hexToRgb = ( hex ) => {
 
 /**
  *
- * @param {string} hex
+ * @param {string} hexString
  * @returns {string}
  */
-const pad = ( hex ) => ( hex.length === 1 ? "0" + hex : hex );
+// const pad = ( hex ) => ( hex.length === 1 ? "0" + hex : hex );
+const pad = hexString => hexString.replace( /^(\w)$/, '0$1' );
+
